@@ -1,0 +1,14 @@
+.section {
+	position: relative;
+	padding-top: $spacing--extra-large;
+	padding-bottom: $spacing--extra-large;
+	@include screen__max-640 {
+		padding-top: $spacing--large;
+		padding-bottom: $spacing--large;
+	}
+	&--small {
+		position: relative;
+		padding-top: $spacing;
+		padding-bottom: $spacing;
+	}
+}

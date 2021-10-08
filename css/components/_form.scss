@@ -1,0 +1,95 @@
+@mixin form-field-base {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    font-size: 1.5rem;
+    border: none;
+    width: 100%;
+    background: #eee;
+}
+.form-field {
+    position: relative;
+    margin-bottom: 3rem;
+    &__label {
+        position: absolute;
+        top: -2rem;
+        font-size: 1.3rem;
+    }
+    &__input {
+        @include form-field-base;
+        height: 4.8rem;
+    }
+    &__textarea {
+        @include form-field-base;
+        padding: 1.6rem;
+        font-family: 'lato';
+        resize: none;
+    }
+    &__select {
+        @include form-field-base;
+        height: 4.8rem;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;       /* Remove default arrow */
+        background-image: url(../images/select-caret.svg);   /* Add custom arrow */
+        background-repeat: no-repeat;
+        background-position: 97% 50%;
+    }
+    &--checkbox {
+        font-size: 1.3rem;
+    }
+}
+.checkbox-container {
+	display: inline;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 13px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	.checkbox {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		height: 0;
+		width: 0;
+		&:checked {
+			~ {
+				.checkbox__checkmark {
+					background-color: #eee ;
+					&:after {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+	.checkbox__checkmark {
+		&:after {
+			left: 9px;
+			top: 6px;
+			width: 5px;
+			height: 10px;
+			border: solid black;
+			border-width: 0 2px 2px 0;
+			-webkit-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			transform: rotate(45deg);
+		}
+	}
+}
+.checkbox__checkmark {
+	position: absolute;
+	top: -3px;
+	left: 0;
+	height: 24px;
+	width: 24px;
+	background-color: #eee;
+	&:after {
+		content: "";
+		position: absolute;
+		display: none;
+	}
+}

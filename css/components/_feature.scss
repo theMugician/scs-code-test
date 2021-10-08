@@ -1,0 +1,23 @@
+.grid--features {
+    grid-column-gap: $spacing;
+    grid-template-columns: 1fr 1fr;
+    @include screen__max-640 {
+      grid-template-columns: 1fr;
+    }
+}
+
+.feature {
+    display: flex;
+    align-items: start;
+    &__image {
+        max-width: 8rem;
+        margin-right: 1.2rem;
+    }
+    &__title {
+        font-size: 2rem;
+        line-height: 2.4rem;
+    }
+    &__description {
+        font-size: 1.3rem;
+    }
+}

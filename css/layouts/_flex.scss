@@ -1,0 +1,43 @@
+.flex {
+  display: flex;
+
+  &__align-center {
+      margin: auto;
+      align-self: center;
+  }
+  
+  &__align-left {
+      margin-right: auto;
+      align-self: center;
+  }
+  
+  &__align-right {
+      margin-left: auto;
+      align-self: center;
+  }
+  
+  &__align-x-center {
+      margin-right: auto;
+      margin-left: auto;
+  }
+  
+  &__align-x-left {
+      margin-right: auto;
+  }
+  
+  &__align-x-right {
+      margin-left: auto;
+  }
+  
+  &__align-y-center {
+      align-self: center;
+  }
+  
+  &__align-y-top {
+      align-self: flex-start;
+  }
+  
+  &__align-y-bottom {
+      align-self: flex-end;
+  }
+}

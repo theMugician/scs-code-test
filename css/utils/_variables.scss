@@ -1,0 +1,85 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+// Base
+/// @type Number
+$base__size: 0.5rem;
+$base__reset-font-size: 62.5%;
+$base__main-font-size: 1.6rem;
+$base__line-height: 1.5;
+$base__touch-size: 36px;
+
+// Font stack
+/// @type List
+$font-stack__text: 'Lato', sans-serif !default;
+
+// Border radius
+/// @type Number
+$border-radius: 0.4rem;
+$border-radius--large: 0.8rem;
+$border-radius--extra-large: 2.5rem;
+
+// Spacing
+/// @type Number
+$spacing: 4 * $base__size;
+$spacing--large: 8 * $base__size;
+$spacing--extra-large: 12 * $base__size;
+$spacing--small: 2 * $base__size;
+
+/// Colors map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$colors: (
+  'primary' : #6ABF46,
+  'primary--light' : #626ED4,
+  'secondary' : #d44711,
+  'secondary--light' : #d44711,
+  'black' : #000000,
+  'text' : #000000,
+  'grey': #4F4F4F,
+  'grey--light': #F6F6F6,
+  'navy': #485A65,
+  'white': #FFFFFF,
+  'success': #2AA39A,
+  'danger': #EC4561,
+  'warning': #F8B425,
+  'info': #38A5F8,
+  'muted': #EDECF1
+);
+
+
+// Colors
+// Make sure colors match up at the top
+/// @type Color
+$color__primary: #6ABF46;
+$color__primary--light: #626ED4;
+$color__secondary: #d44711;
+$color__secondary--light: #d44711;
+$color__black: #000000;
+$color__text: #000000;
+$color__grey: #4F4F4F;
+$color__grey--light: #F6F6F6;
+$color__navy: #485A65;
+$color__white: #FFFFFF;
+$color__success: #2AA39A;
+$color__danger: #EC4561;
+$color__warning: #F8B425;
+$color__info: #38A5F8;
+$color__muted: #EDECF1;
+
+
+/// Container's maximum width
+/// @type Length
+$max-width__no-max: 100%;
+$max-width: 112rem !default;
+$max-width__medium: 84rem !default;
+$max-width__small: 64rem !default;
+
+
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+$base-url: '../images/' !default;

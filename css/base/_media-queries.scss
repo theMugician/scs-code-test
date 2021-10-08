@@ -1,0 +1,105 @@
+// media aliases and breakpoints
+$screen__sm-min: 600px;
+$screen__md-min: 920px;
+$screen__lg-min: 1280px;
+$screen__xl-min: 1920px;
+
+$screen__xs-max: 599.9px;
+$screen__sm-max: 919.9px;
+$screen__md-max: 1279.9px;
+$screen__lg-max: 1919.9px;
+$screen__xl-max: 5000px;
+
+// media devices added for SCS code test
+@mixin screen__max-960 {
+  @media (max-width: 960px) {
+    @content;
+  }
+}
+
+@mixin screen__max-640 {
+  @media (max-width: 640px) {
+    @content;
+  }
+}
+
+// media devices
+@mixin screen__xs {
+  @media (max-width: #{$screen__xs-max}) {
+    @content;
+  }
+}
+
+@mixin screen__sm {
+  @media (min-width: #{$screen__sm-min}) and (max-width: #{$screen__sm-max}) {
+    @content;
+  }
+}
+
+@mixin screen__md {
+  @media (min-width: #{$screen__md-min}) and (max-width: #{$screen__md-max}) {
+    @content;
+  }
+}
+
+@mixin screen__lg {
+  @media (min-width: #{$screen__lg-min}) and (max-width: #{$screen__lg-max}) {
+    @content;
+  }
+}
+
+@mixin screen__xl {
+  @media (min-width: #{$screen__xl-min}) and (max-width: #{$screen__xl-max}) {
+    @content;
+  }
+}
+
+// media lt queries
+@mixin screen__lt-sm {
+  @media (max-width: #{$screen__xs-max}) {
+    @content;
+  }
+}
+
+@mixin screen__lt-md {
+  @media (max-width: #{$screen__sm-max}) {
+    @content;
+  }
+}
+
+@mixin screen__lt-lg {
+  @media (max-width: #{$screen__md-max}) {
+    @content;
+  }
+}
+
+@mixin screen__lt-xl {
+  @media (max-width: #{$screen__lg-max}) {
+    @content;
+  }
+}
+
+// media gt queries
+@mixin screen__gt-xs {
+  @media (min-width: #{$screen__sm-min}) {
+    @content;
+  }
+}
+
+@mixin screen__gt-sm {
+  @media (min-width: #{$screen__md-min}) {
+    @content;
+  }
+}
+
+@mixin screen__gt-md {
+  @media (min-width: #{$screen__lg-min}) {
+    @content;
+  }
+}
+
+@mixin screen__gt-lg {
+  @media (min-width: #{$screen__xl-min}) {
+    @content;
+  }
+}

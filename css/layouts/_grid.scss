@@ -1,0 +1,15 @@
+.grid {
+	display: grid;
+	grid-row-gap: $spacing--large;
+	grid-column-gap: $spacing--large;
+  &__two-column {
+    grid-template-columns: 1fr 1fr;
+    @include screen__max-960 {
+      grid-template-columns: 1fr;
+    }
+  }
+  &--small {
+    grid-row-gap: 0;
+    grid-column-gap: $spacing;
+  }
+}

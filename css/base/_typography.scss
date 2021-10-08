@@ -1,0 +1,60 @@
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: $color__text;
+  font: normal $base__main-font-size $font-stack__text;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: $spacing;
+	font-weight: bold;
+	color: $color__black;
+	font-family: 'rift';
+	line-height: 1;
+}
+
+
+$heading-sizes: (
+	h1 : 7rem,
+	h2 : 7rem,
+	h3 : 5rem,
+	h4 : 3.6rem,
+	h5 : 2.4rem,
+	h6 : 1.8rem
+);
+
+@mixin font-size__mobile($size) {
+	@include screen__max-960  {
+		font-size: 0.8 * $size;
+	}
+}
+
+
+@each $heading,$size in $heading-sizes {
+  #{$heading} {
+    font-size: $size;
+    @include font-size__mobile($size);
+  }
+}
+
+p {
+	font-size: $base__main-font-size;
+	margin-bottom: $spacing__small;
+	color: $color__black;
+}
+
+.small {
+	font-size: $base__main-font-size * 0.8;
+}
+
+.extra-small {
+	font-size: $base__main-font-size * 0.6;
+}
+
+.tagline {
+	font-size: 1.4rem;
+	color: $color__navy;
+	text-transform: uppercase;
+	margin-bottom: 1.6rem;
+}

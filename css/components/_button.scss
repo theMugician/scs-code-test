@@ -1,0 +1,29 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+.button {
+	border-radius: $border-radius--extra-large;
+  font-size: 1.4rem;
+  align-items: center;
+  text-align: center;
+  min-width: 27.2rem;
+  text-decoration: none;
+  color: #162023;
+  height: 4.6rem;
+  background-color: $color__primary;
+  border: 0.2rem solid $color__primary;
+  font-weight: 800;
+  &--small {
+    min-width: 10rem;
+  }
+}
+
+@each $name,$color in $colors {
+ .button--#{$name}{
+    background-color: $color;
+   	color: #162023;
+   	border: 0.2rem solid $color;
+ 	}
+}
+
